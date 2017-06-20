@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" ng-app="repoFinderApp">
 <head>
 	<title>gitRepoFinder</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<base href="/gitRepoFinder/">
-
+	<link rel="stylesheet" href="repoFinderCSS.css">
 </head>
 
 <body>
+	<header class="header"> background color black/blue #152123
+		<div class="loading-bar"></div>
+		<img src="/repoPictures/gitLogo.png" id="header-logo">
+	</header>
 
-	<h1> Hello World - gitRepoFinder</h1>
+	<div class="search-box">
+		<input title="RepoName" type="text" id="repoName">
+		<submit type="button" ng-click="searchInput"></submit>
+	</div>
 
-	<div class="flexContainer">
-
-		<div class="topHeader"> background color black/blue
-			<div class="gitHubLogo"> <img src="/repoPictures/gitLogo.png"></div>
-			<div class="searchBar"> Search GitHub </div>
-		</div>
-
-		<div class="repoReturnBox"> REPOS RETURNED HERE </div>
-
+	<div class="repo-return-box"> 
+	REPOS RETURNED HERE
 	</div>
 	
 
+
+	<script src="repoFinderJS.js"></script>
 </body>
 </html>
