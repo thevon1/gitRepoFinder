@@ -4,8 +4,40 @@ html, body {
 width: 100%
 }
 
-#header-logo.resize {
-	width: 50px;
-	height: auto;
+body {
+	display: flex;
+	flex-direction: column;
+	background-color: gray;
 }
 
+
+.header {
+	background-color: #152123;
+
+}
+#header-logo {
+	margin-left: 50px;
+	height: auto;
+	width: 50px;
+}
+
+
+#repoName {
+	background-color: lightgray;
+}
+.repo-return-box {
+
+	background-color: orange;
+	min-height: 600px;
+	margin: 100px 100px 40px 80px;
+	border-style: outset;
+	border-color: black;
+
+}
+
+
+.search-box {
+	position: relative;
+	margin: 20px 40px 10px 40px;
+	position: center;
+}

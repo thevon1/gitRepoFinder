@@ -3,27 +3,47 @@
 <head>
 	<title>gitRepoFinder</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<base href="/gitRepoFinder/">
+	<!-- <base href="/gitRepoFinder/"> NEEDS TO BE ADDED TO SERVE ON GIT HUB-->      
 	<link rel="stylesheet" href="repoFinderCSS.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.css' type='text/css' media='all' />
+	<!-- LOCAL HOST NOT LIKING THIS LOADING-BAR STYLE SHEET
+	|
+	V -->
+	<link rel='stylesheet' href='build/loading-bar.min.css' type='text/css' media='all' /> 
 </head>
 
 <body>
-	<header class="header"> background color black/blue #152123
-		<div class="loading-bar"></div>
+
+
+
+	<header class="header">
 		<img src="/repoPictures/gitLogo.png" id="header-logo">
 	</header>
 
-	<div class="search-box">
-		<input title="RepoName" type="text" id="repoName">
-		<submit type="button" ng-click="searchInput"></submit>
+	<div class="theWorkBox" ng-controller="repoCtrl">
+
+		<div class="search-box">
+			Search For Repos: <input title="RepoName" type="text" 
+								id="repoSearchReqItem" ng-model='searchItem'>
+			<button type="button" ng-click="searchInput">Submit</button>
+		</div>
+
+		<div class="repo-return-box" id="repo-return-box"> 
+			{{searchItem}}
+		</div>
 	</div>
 
-	<div class="repo-return-box"> 
-	REPOS RETURNED HERE
-	</div>
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+                <!-- ui router link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>   
+    <script src="repoFinderJS.js"></script> 
+    <!-- LOCAL HOST NOT LIKING THIS LOADING-BAR STYLE SHEET
+	|
+	V -->
+    <script type='text/javascript' src='build/loading-bar.min.js'></script>
+     <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.js'></script>
 
-
-	<script src="repoFinderJS.js"></script>
+<!--     <script src="ui-bootstrap-tpls-2.5.0.min.js"></script> -->
 </body>
 </html>
