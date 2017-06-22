@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" ng-app="repoFinderApp">
+<html lang="en-us" ng-app="repoFinderApp" class="full-height">
 <head>
 	<title>gitRepoFinder</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
 	<!-- LOCAL HOST NOT LIKING THIS LOADING-BAR STYLE SHEET
 	|
 	V -->
-	<link rel='stylesheet' href='build/loading-bar.min.css' type='text/css' media='all' /> 
+	<link rel='stylesheet' href='node_modules/angular-loading-bar/build/loading-bar.min.js' type='text/css' media='all' /> 
 </head>
 
 <body>
@@ -21,28 +21,23 @@
 		<img src="/repoPictures/gitLogo.png" id="header-logo">
 	</header>
 
-	<div class="theWorkBox" ng-controller="repoCtrl">
-
-		<div class="search-box">
+		<!-- <div class="search-box">
 			Search For Repos: <input title="RepoName" type="text" 
 								id="repoSearchReqItem" ng-model='searchItem'>
 			<button type="button" ng-click="searchInput">Submit</button>
-		</div>
+		</div> -->
 
-		<div class="repo-return-box" id="repo-return-box"> 
-			{{searchItem}}
+		<div class="repo-return-box" ng-controller="repoCtrl" id="repo-return-box"> 
+			
 		</div>
-	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
                 <!-- ui router link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>   
     <script src="repoFinderJS.js"></script> 
-    <!-- LOCAL HOST NOT LIKING THIS LOADING-BAR STYLE SHEET
-	|
-	V -->
-    <script type='text/javascript' src='build/loading-bar.min.js'></script>
+    <script type='text/javascript' src='node_modules/angular-loading-bar/build/loading-bar.min.js'></script>
      <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.js'></script>
+
 
 <!--     <script src="ui-bootstrap-tpls-2.5.0.min.js"></script> -->
 </body>
