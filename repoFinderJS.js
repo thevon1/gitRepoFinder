@@ -1,16 +1,26 @@
 var repoApp = angular.module('repoFinderApp', ['angular-loading-bar']);
 
-repoApp.controller('repoCtrl', function ($scope) {
-	
-	function reqListener () {
-  		document.getElementById("repo-return-box").innerHTML = JSON.parse(this.responseText);
-}
+repoApp.controller('repoCtrl', function($scope, $http) {
 
-var openReq = new XMLHttpRequest();
-openReq.addEventListener("load", reqListener);
-openReq.open("GET", "https://api.github.com/repositories");
-openReq.send();
+    $http.get("https://api.github.com/repositories")
+    .then(function(reqInfo) {
+        $scope.myPeople = reqInfo.data;
+    });
+
 
 });
 
 
+
+
+
+
+
+
+// the example at the bottom shows an example of them ***assigning an array to scope***, 
+// then ***using ng-repeat to iterate over each item***.
+
+// The example also has an example of an ***input filter*** in the ng-repeat 
+// expression most of  the code you need is right there in that example, 
+// with the exception of property names etc.  You'll have to change that 
+// for your assignment

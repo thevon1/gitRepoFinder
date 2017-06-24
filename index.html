@@ -14,22 +14,25 @@
 </head>
 
 <body>
-
-
-
 	<header class="header">
 		<img src="/repoPictures/gitLogo.png" id="header-logo">
 	</header>
 
+		<div class="repo-return-box" ng-controller="repoCtrl" id="repo-return-box"> 
+			There were {{myPeople.length}} repo's found<br><br><br>
+
+			<ol class="data-container">
+				<li class="data-item" ng-repeat="firstItem in myPeople">
+				{{firstItem.name}} has ID # {{firstItem.id }}
+				</li>
+			</ol>
+		</div>
+
 		<!-- <div class="search-box">
-			Search For Repos: <input title="RepoName" type="text" 
+			Search For Repos: <input title="RepoName" type="text" placeholder="Search Repos" 
 								id="repoSearchReqItem" ng-model='searchItem'>
 			<button type="button" ng-click="searchInput">Submit</button>
 		</div> -->
-
-		<div class="repo-return-box" ng-controller="repoCtrl" id="repo-return-box"> 
-			
-		</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
                 <!-- ui router link -->
