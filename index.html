@@ -7,10 +7,6 @@
 	<link rel="stylesheet" href="repoFinderCSS.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.css' type='text/css' media='all' />
-	<!-- LOCAL HOST NOT LIKING THIS LOADING-BAR STYLE SHEET
-	|
-	V -->
-	<link rel='stylesheet' href='node_modules/angular-loading-bar/build/loading-bar.min.js' type='text/css' media='all' /> 
 </head>
 
 <body>
@@ -18,15 +14,15 @@
 		<img src="/repoPictures/gitLogo.png" id="header-logo">
 	</header>
 
-		<div class="repo-return-box" ng-controller="repoCtrl" id="repo-return-box"> 
-			There were {{myPeople.length}} repo's found<br><br><br>
+	<div class="repo-return-box" ng-controller="repoCtrl" id="repo-return-box"> 
+		There were {{repos.length}} repo's found<br><br><br>
 
-			<ol class="data-container">
-				<li class="data-item" ng-repeat="firstItem in myPeople">
-				{{firstItem.name}} has ID # {{firstItem.id }}
-				</li>
-			</ol>
-		</div>
+		<ol class="data-container">
+		<li class="data-item" ng-repeat="repo in repos">
+				{{repo.name}} has ID # {{repo.id }}
+			</li>
+		</ol>
+	</div>
 
 		<!-- <div class="search-box">
 			Search For Repos: <input title="RepoName" type="text" placeholder="Search Repos" 
@@ -34,14 +30,12 @@
 			<button type="button" ng-click="searchInput">Submit</button>
 		</div> -->
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-                <!-- ui router link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>   
-    <script src="repoFinderJS.js"></script> 
-    <script type='text/javascript' src='node_modules/angular-loading-bar/build/loading-bar.min.js'></script>
-     <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.js'></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>   
+		<script src="repoFinderJS.js"></script> 
+		<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.js'></script>
 
 
-<!--     <script src="ui-bootstrap-tpls-2.5.0.min.js"></script> -->
-</body>
-</html>
+		<!--     <script src="ui-bootstrap-tpls-2.5.0.min.js"></script> -->
+	</body>
+	</html>

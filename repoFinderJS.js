@@ -4,7 +4,7 @@ repoApp.controller('repoCtrl', function($scope, $http) {
 
     $http.get("https://api.github.com/repositories")
     .then(function(reqInfo) {
-        $scope.myPeople = reqInfo.data;
+        $scope.repos = reqInfo.data;
     });
 
 
