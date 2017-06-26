@@ -19,7 +19,8 @@
 
 		<ol class="data-container">
 		<li class="data-item" ng-repeat="repo in repos">
-				{{repo.name}} has ID # {{repo.id }}
+				{{repo.name}} has ID # {{repo.id}}, <strong>{{repo.full_name}}</strong>,
+				{{repo.owner.login}}, {{repo.owner.avatar_url}}
 			</li>
 		</ol>
 	</div>
