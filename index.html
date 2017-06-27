@@ -3,7 +3,7 @@
 <head>
 	<title>gitRepoFinder</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <base href="/gitRepoFinder/"> NEEDS TO BE ADDED TO SERVE ON GIT HUB-->      
+	 <base href="/gitRepoFinder/"> <!-- NEEDS TO BE ADDED TO SERVE ON GIT HUB  -->     
 	<link rel="stylesheet" href="repoFinderCSS.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.css' type='text/css' media='all' />
@@ -19,7 +19,7 @@
 
 		<ul class="data-container">
 			<li class="data-item" ng-repeat="repo in repos">
-				<b class="repo-full-name">{{repo.full_name}}</b><br>
+				<a href="https://github.com/{{repo.owner.html_url}}" class="repo-full-name">{{repo.full_name}}</a><br>
 				{{repo.description}}
 			</li>
 		</ul>
