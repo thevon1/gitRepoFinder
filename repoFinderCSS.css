@@ -9,10 +9,11 @@ body {
 }
 
 .data-item {
-	margin-bottom: 20px;
     border-bottom: 2px;
     border-color: lightgray;
     border-bottom-style: groove;
+    margin-bottom: 20px;
+    width: 75%;
 }
 
 
@@ -21,7 +22,7 @@ body {
 
 }
 #header-logo {
-	margin-left: 50px;
+	margin-left: 0px;
 	height: auto;
 	width: 50px;
 }
@@ -40,9 +41,9 @@ body {
 	margin-left: 20px;
 }
 .repo-return-box {
-	background-color: #FFF9F9;
 	min-height: 600px;
 	margin: 100px 100px 40px 80px;
+	width: 75%;
 }
 
 

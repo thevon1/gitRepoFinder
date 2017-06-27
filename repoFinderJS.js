@@ -7,6 +7,7 @@ repoApp.controller('repoCtrl', function($scope, $http) {
         $scope.repos = reqInfo.data;
     });
 
+    
 
 });
 
