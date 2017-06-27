@@ -8,6 +8,13 @@ body {
 	background-color: gray;
 }
 
+.data-item {
+	margin-bottom: 20px;
+    border-bottom: 2px;
+    border-color: lightgray;
+    border-bottom-style: groove;
+}
+
 
 .header {
 	background-color: #152123;
@@ -23,14 +30,19 @@ body {
 #repoName {
 	background-color: lightgray;
 }
-.repo-return-box {
 
+.repo-full-name {
+    font-size: 20px;
+    color: #0366d6;
+}
+
+.repo-length {
+	margin-left: 20px;
+}
+.repo-return-box {
 	background-color: #FFF9F9;
 	min-height: 600px;
 	margin: 100px 100px 40px 80px;
-	border-style: outset;
-	border-color: black;
-
 }
 
 
@@ -38,4 +50,11 @@ body {
 	position: relative;
 	margin: 20px 40px 10px 40px;
 	position: center;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 0;
 }

@@ -14,29 +14,24 @@
 		<img src="/repoPictures/gitLogo.png" id="header-logo">
 	</header>
 
-	<div class="repo-return-box" ng-controller="repoCtrl" id="repo-return-box"> 
-		There were {{repos.length}} repo's found<br><br><br>
+	<div class="repo-return-box" ng-controller="repoCtrl" id="repo-return-box"><br>
+		<div class="repo-length">There were {{repos.length}} repo's found</div><br><br>
 
-		<ol class="data-container">
-		<li class="data-item" ng-repeat="repo in repos">
-				{{repo.name}} has ID # {{repo.id}}, <strong>{{repo.full_name}}</strong>,
-				{{repo.owner.login}}, {{repo.owner.avatar_url}}
+		<ul class="data-container">
+			<li class="data-item" ng-repeat="repo in repos">
+				<b class="repo-full-name">{{repo.full_name}}</b><br>
+				{{repo.description}}
 			</li>
-		</ol>
+		</ul>
 	</div>
 
-		<!-- <div class="search-box">
-			Search For Repos: <input title="RepoName" type="text" placeholder="Search Repos" 
-								id="repoSearchReqItem" ng-model='searchItem'>
-			<button type="button" ng-click="searchInput">Submit</button>
-		</div> -->
 
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>   
-		<script src="repoFinderJS.js"></script> 
-		<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>   
+	<script src="repoFinderJS.js"></script> 
+	<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.js'></script>
 
 
-		<!--     <script src="ui-bootstrap-tpls-2.5.0.min.js"></script> -->
-	</body>
-	</html>
+	<!--     <script src="ui-bootstrap-tpls-2.5.0.min.js"></script> -->
+</body>
+</html>
